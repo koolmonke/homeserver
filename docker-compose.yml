@@ -2,7 +2,7 @@ version: "3"
 
 services:
   nextcloud:
-    image: nextcloud:22-fpm-alpine
+    image: nextcloud:23-fpm-alpine
     environment:
       REDIS_HOST: nextcloud-redis
       REDIS_HOST_PASSWORD: ${REDIS_PW}
