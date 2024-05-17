@@ -2,7 +2,7 @@ version: "3"
 
 services:
   nextcloud:
-    image: nextcloud:23-fpm-alpine
+    image: nextcloud:stable-fpm-alpine
     environment:
       REDIS_HOST: nextcloud-redis
       REDIS_HOST_PASSWORD: ${REDIS_PW}
@@ -15,7 +15,7 @@ services:
     restart: always
 
   nextcloud-redis:
-    image: redis:6-alpine
+    image: redis:7-alpine
     command: redis-server --requirepass ${REDIS_PW}
     volumes:
       - redis_data:/data
